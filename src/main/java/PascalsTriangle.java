@@ -29,7 +29,20 @@ public class PascalsTriangle {
                 //create row
                 //add elements to row
                 //add row to triangle
-
+                ArrayList<Integer> newRow = new ArrayList<>();
+                for(int col = 0; col < row + 1; col++) {
+                    if(col == 0) {
+                        newRow.add(1);
+                    }
+                    else if(col == row) {
+                        newRow.add(col, 1);
+                    }
+                    else {
+                        int calcCurrentIndex = triangle.get(row - 1).get(col - 1) + triangle.get(row - 1).get(col);
+                        newRow.add(calcCurrentIndex);
+                    }
+                }
+                triangle.add(newRow);
             }
             return triangle;
         }
