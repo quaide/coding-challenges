@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="QuaideListTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-10-02T00:36:45" hostname="DESKTOP-COI2KMT" time="0.004">
+<testsuite name="QuaideListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-02T02:02:16" hostname="DESKTOP-COI2KMT" time="0.016">
   <properties/>
-  <testcase name="testAddFull" classname="QuaideListTest" time="0.002"/>
-  <testcase name="testAdd" classname="QuaideListTest" time="0.0"/>
-  <testcase name="testGet" classname="QuaideListTest" time="0.0"/>
-  <testcase name="testContains" classname="QuaideListTest" time="0.0"/>
-  <testcase name="testIsEmpty" classname="QuaideListTest" time="0.0"/>
-  <testcase name="testRemove" classname="QuaideListTest" time="0.0"/>
-  <testcase name="testConstructor" classname="QuaideListTest" time="0.0"/>
+  <testcase name="addManyElements()" classname="QuaideListTest" time="0.016"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

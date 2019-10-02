@@ -1,5 +1,5 @@
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
@@ -10,7 +10,7 @@ public class PascalsTriangleTest {
                 PascalsTriangle.solve(0);
         ArrayList<Integer> firstRow = actualTriangle.get(0);
         boolean isEmpty = firstRow.isEmpty();
-        Assert.assertEquals(true, isEmpty);
+        Assertions.assertEquals(true, isEmpty);
     }
 
         /**
@@ -22,8 +22,8 @@ public class PascalsTriangleTest {
     public void oneNumRows() {
         ArrayList<ArrayList<Integer>> actualTriangle = PascalsTriangle.solve(1);
         ArrayList<Integer> firstRow = actualTriangle.get(0);
-        Assert.assertEquals(1, firstRow.size());
-        Assert.assertEquals(Integer.valueOf(1), firstRow.get(0) ); //"boxing a primitive"
+        Assertions.assertEquals(1, firstRow.size());
+        Assertions.assertEquals(Integer.valueOf(1), firstRow.get(0) ); //"boxing a primitive"
     }
     /**
      * [
@@ -36,11 +36,11 @@ public class PascalsTriangleTest {
         ArrayList<ArrayList<Integer>> actualTriangle = PascalsTriangle.solve(2);
         ArrayList<Integer> firstRow = actualTriangle.get(0);
         ArrayList<Integer> secondRow = actualTriangle.get(1);
-        Assert.assertEquals(1, firstRow.size());
-        Assert.assertEquals(2, secondRow.size());
-        Assert.assertEquals(Integer.valueOf(1), firstRow.get(0));
-        Assert.assertEquals(Integer.valueOf(1), secondRow.get(0));
-        Assert.assertEquals(Integer.valueOf(1), secondRow.get(1));
+        Assertions.assertEquals(1, firstRow.size());
+        Assertions.assertEquals(2, secondRow.size());
+        Assertions.assertEquals(Integer.valueOf(1), firstRow.get(0));
+        Assertions.assertEquals(Integer.valueOf(1), secondRow.get(0));
+        Assertions.assertEquals(Integer.valueOf(1), secondRow.get(1));
     }
 
     /**
@@ -59,22 +59,22 @@ public class PascalsTriangleTest {
         ArrayList<Integer> thirdRow = actualTriangle.get(2);
         ArrayList<Integer> fourthRow = actualTriangle.get(3);
 
-        Assert.assertEquals(1, firstRow.size());
-        Assert.assertEquals(Integer.valueOf(1), firstRow.get(0));
+        Assertions.assertEquals(1, firstRow.size());
+        Assertions.assertEquals(Integer.valueOf(1), firstRow.get(0));
 
-        Assert.assertEquals(2, secondRow.size());
-        Assert.assertEquals(Integer.valueOf(1), secondRow.get(0));
-        Assert.assertEquals(Integer.valueOf(1), secondRow.get(1));
+        Assertions.assertEquals(2, secondRow.size());
+        Assertions.assertEquals(Integer.valueOf(1), secondRow.get(0));
+        Assertions.assertEquals(Integer.valueOf(1), secondRow.get(1));
 
-        Assert.assertEquals(3, thirdRow.size());
-        Assert.assertEquals(Integer.valueOf(1), thirdRow.get(0));
-        Assert.assertEquals(Integer.valueOf(2), thirdRow.get(1));
-        Assert.assertEquals(Integer.valueOf(1), thirdRow.get(2));
+        Assertions.assertEquals(3, thirdRow.size());
+        Assertions.assertEquals(Integer.valueOf(1), thirdRow.get(0));
+        Assertions.assertEquals(Integer.valueOf(2), thirdRow.get(1));
+        Assertions.assertEquals(Integer.valueOf(1), thirdRow.get(2));
 
-        Assert.assertEquals(4, fourthRow.size());
-        Assert.assertEquals(Integer.valueOf(1), fourthRow.get(0));
-        Assert.assertEquals(Integer.valueOf(3), fourthRow.get(1));
-        Assert.assertEquals(Integer.valueOf(3), fourthRow.get(2));
-        Assert.assertEquals(Integer.valueOf(1), fourthRow.get(3));
+        Assertions.assertEquals(4, fourthRow.size());
+        Assertions.assertEquals(Integer.valueOf(1), fourthRow.get(0));
+        Assertions.assertEquals(Integer.valueOf(3), fourthRow.get(1));
+        Assertions.assertEquals(Integer.valueOf(3), fourthRow.get(2));
+        Assertions.assertEquals(Integer.valueOf(1), fourthRow.get(3));
     }
 }
