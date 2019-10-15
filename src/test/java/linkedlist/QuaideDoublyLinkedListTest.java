@@ -3,6 +3,8 @@ package linkedlist;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+//still need: prepend(), pollFirst(), pollLast(), remove()
+
 public class QuaideDoublyLinkedListTest {
 
     @Test
@@ -28,5 +30,26 @@ public class QuaideDoublyLinkedListTest {
             Assertions.assertEquals(i, doublyLinkedList.peekLast());
         }
 
+    }
+
+    @Test
+    public void removeElementsFromRear() {
+        QuaideDoublyLinkedList<Integer> doublyLinkedList = new QuaideDoublyLinkedList<>();
+
+        doublyLinkedList.append(1);
+        doublyLinkedList.append(2);
+        doublyLinkedList.append(3);
+        doublyLinkedList.pollLast();
+
+        Assertions.assertEquals(2, doublyLinkedList.peekLast());
+
+        doublyLinkedList.pollLast();;
+
+        Assertions.assertEquals(1, doublyLinkedList.peekLast());
+
+        doublyLinkedList.pollLast();
+        doublyLinkedList.pollLast();
+
+        Assertions.assertEquals(null, doublyLinkedList.peekLast());
     }
 }

@@ -30,6 +30,10 @@ public class QuaideDoublyLinkedList<T> {
         size++;
     }
 
+    public void pollLast() {
+        tail = tail.getInFrontOfMe();
+    }
+
     public T peek() {
         return head.getValue();
     }
